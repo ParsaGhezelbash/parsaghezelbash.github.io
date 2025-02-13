@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Developer | CS Innovator</title>
+    <meta name="description" content="Computer Science student specializing in AI and Blockchain development">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body>
+    <div class="theme-toggle">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </div>
+
+    <nav class="nav-container">
+        <a href="#hero" class="nav-item">Home</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#contact" class="nav-item">Contact</a>
+    </nav>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hacker-text">>> Hello World!</div>
+            <h1 class="typewriter">Parsa Ghezelbash</h1>
+            <p>CS Student and RL Enthusiastic</p>
+            <div class="social-links">
+                <a href="https://github.com/ParsaGhezelbash" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/parsa-ghezelbash-7426a8233/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.kaggle.com/parsaghezelbash" target="_blank"><i class="fab fa-kaggle"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <h2>Education</h2>
+        <div class="timeline-item">
+            <h3>B.Sc. Computer Engineering</h3>
+            <p>Sharif University of Technology (2022-now)</p>
+            <p>GPA: 19.01/20.0 | Relevant Coursework: AI, Machine Learning, Deep Learning, Convex Optimization, Reinforcement Learning, Information Theory</p>
+        </div>
+    </section>
+
+    <section class="project-grid" id="projects">
+        <h2 style="width: 100%; text-align: center; padding: 2rem 0;">Featured Projects</h2>
+        <div class="project-card" data-modal="ml">
+            <h3>Machine Learning Notebooks</h3>
+            <p>Classic Ml and Deep methods</p>
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">Vision</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">LLM</span>
+            </div>
+        </div>
+        <div class="project-card" data-modal="deep">
+            <h3>Deep Learning Notebooks</h3>
+            <p>Deep Learning Methods</p>
+            <div class="tech-stack">
+                <span class="tech-tag">Vision</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">GAN</span>
+                <span class="tech-tag">LLM</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="skill-cloud" id="skills">
+        <h2 style="width: 100%; text-align: center; padding: 2rem 0;">Technical Skills</h2>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">Scikit-Learn</span>
+        <span class="skill-tag">Numpy</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">C</span>
+    </section>
+
+    <section class="contact-info" id="contact">
+        <div class="contact-item">
+            <i class="fas fa-envelope" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+            <h3>Email</h3>
+            <p>parsaghezelbash04@gmail.com</p>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-phone" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+            <h3>Phone</h3>
+            <p>+98 (916) 455-8856</p>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-map-marker-alt" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+            <h3>Location</h3>
+            <p>Sharif University of Technology, Tehran</p>
+        </div>
+    </section>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
