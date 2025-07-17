@@ -88,16 +88,25 @@ a {
 }
 
 section {
-    padding-top: 80px;
-    margin-top: -80px;
+    padding-top: 60px;
+    margin-top: -60px;
+}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0 1.5rem 0;
+    grid-column: 1 / -1;
+    margin-bottom: 0;
 }
 
 .hero {
-    height: 100vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     padding: 0 10%;
     position: relative;
+    margin-bottom: -100px;
 }
 
 .hero-content {
@@ -121,8 +130,14 @@ section {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 4rem 10%;
+    gap: 1.0rem;
+    padding: 1rem 10% 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .project-card {
@@ -130,16 +145,42 @@ section {
     color: var(--text-light);
     border-radius: 15px;
     padding: 1.5rem;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
     background: rgba(255, 255, 255, 0.1);
+    border-color: var(--secondary);
+    box-shadow: 0 15px 30px rgba(0, 255, 136, 0.1);
 }
+
+.project-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Add some spacing for tech stack */
+.tech-stack {
+    margin-top: auto; /* Push to bottom if using flexbox */
+}
+
+.tech-tag {
+    margin: 0.2rem 0.3rem 0.2rem 0;
+    font-size: 0.8rem;
+}
+
 
 .skill-cloud {
     display: flex;
@@ -147,6 +188,7 @@ section {
     gap: 1rem;
     justify-content: center;
     padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .skill-tag {
@@ -191,8 +233,10 @@ section {
 }
 
 .timeline {
-    padding: 4rem 10%;
+    padding: 0rem 10% 2rem;
     position: relative;
+    margin-top: -60px;
+    margin-bottom: 20px;
 }
 
 .timeline-item {
@@ -250,9 +294,13 @@ section {
 .contact-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 4rem 20%;
+    gap: 1.5rem;
+    padding: 2rem 10%;
     text-align: center;
+    max-width: 1000px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the entire grid */
+    width: 100%;
+    justify-items: center; /* Center grid items */
 }
 
 .contact-item {
@@ -262,8 +310,87 @@ section {
     border-radius: 15px;
 }
 
+.contact-item i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+
 .light-mode .project-card,
 .light-mode .contact-item,
 .light-mode .nav-container {
     background: rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .skill-tag {
+    background: var(--accent);
+    color: white;
+}
+
+.light-mode .social-links a {
+    color: var(--text-dark);
+}
+
+.light-mode .nav-item {
+    color: var(--text-dark);
+}
+
+.light-mode .nav-item.active {
+    color: var(--secondary) !important;
+}
+
+.light-mode .nav-item:hover::after {
+    background: var(--secondary);
+}
+
+.light-mode .timeline-item::before {
+    background: var(--accent);
+}
+
+.light-mode .timeline-item {
+    border-left-color: var(--secondary);
+}
+
+.light-mode .hacker-text {
+    color: var(--secondary);
+}
+
+.light-mode .typewriter {
+    border-right-color: var(--secondary);
+}
+
+.light-mode h1, .light-mode h2, .light-mode h3, .light-mode p, .light-mode span {
+    color: var(--text-dark);
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.light-mode .cta-button {
+    color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.light-mode .cta-button:hover {
+    background: var(--secondary);
+    color: var(--primary);
 }

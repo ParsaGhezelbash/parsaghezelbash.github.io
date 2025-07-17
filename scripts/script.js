@@ -5,7 +5,7 @@ document.querySelectorAll('.nav-item').forEach(link => {
         const targetSection = document.querySelector(targetId);
         
         if (targetSection) {
-            const offset = 80;
+            const offset = 60;
             const elementPosition = targetSection.offsetTop - offset;
             
             window.scrollTo({
