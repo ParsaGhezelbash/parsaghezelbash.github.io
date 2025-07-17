@@ -261,7 +261,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    padding: 2rem 10%;
+    padding: 0rem 10% 2rem;
     text-align: center;
     max-width: 1000px; /* Limit the maximum width */
     margin: 0 auto; /* Center the entire grid */
@@ -297,7 +297,6 @@ section {
     margin-bottom: 1rem;
     display: block;
 }
-
 
 .light-mode .project-card,
 .light-mode .contact-item,
