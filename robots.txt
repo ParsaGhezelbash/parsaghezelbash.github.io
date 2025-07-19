@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://parsaghezelbash.github.io/sitemap.xml
