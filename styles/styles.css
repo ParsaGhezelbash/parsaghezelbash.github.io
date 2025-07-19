@@ -208,8 +208,8 @@ section {
 .timeline {
     padding: 0rem 10% 2rem;
     position: relative;
-    margin-top: -60px;
-    margin-bottom: 20px;
+    /* margin-top: -60px; */
+    /* margin-bottom: 20px; */
 }
 
 .timeline-item {
@@ -419,6 +419,28 @@ section {
         left: 15px;
         padding: 0.6rem;
     }
+
+    .education-intro {
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+    
+    .education-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .education-period {
+        align-self: flex-start;
+    }
+    
+    .course-tags {
+        justify-content: center;
+    }
+
+    .academic-info {
+        padding: 0.8rem;
+    }
     
     /* Stack vertically on very small screens */
     @media (max-width: 480px) {
@@ -435,4 +457,162 @@ section {
             font-size: 0.85rem;
         }
     }
+}
+
+.education-intro {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 0 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.education-period {
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.university-name {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.coursework-section {
+    margin: 1.5rem 0;
+}
+
+.coursework-section h4 {
+    margin-bottom: 0.8rem;
+    color: var(--secondary);
+    font-size: 1rem;
+}
+
+.course-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.course-tag {
+    background: rgba(0, 255, 136, 0.1);
+    color: var(--secondary);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.course-tag:hover {
+    background: rgba(0, 255, 136, 0.2);
+    transform: translateY(-2px);
+}
+
+.academic-achievements {
+    margin-top: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.academic-achievements summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.academic-achievements summary::before {
+    content: '▶';
+    margin-right: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.academic-achievements[open] summary::before {
+    transform: rotate(90deg);
+}
+
+/* .achievement-content {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.achievement-content p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+} */
+
+.academic-info {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.academic-info p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.academic-info p:last-child {
+    margin-bottom: 0;
+}
+
+.academic-info strong {
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+/* Light mode adjustments */
+.light-mode .course-tag {
+    background: rgba(0, 123, 255, 0.1);
+    color: var(--secondary);
+    border-color: rgba(0, 123, 255, 0.3);
+}
+
+.light-mode .course-tag:hover {
+    background: rgba(0, 123, 255, 0.2);
+}
+
+.light-mode .education-period {
+    background: var(--secondary);
+    color: white;
+}
+
+/* .light-mode .academic-achievements {
+    border-color: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.light-mode .achievement-content {
+    border-top-color: rgba(0, 0, 0, 0.1);
+} */
+
+.light-mode .academic-info {
+    border-color: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.02);
 }
