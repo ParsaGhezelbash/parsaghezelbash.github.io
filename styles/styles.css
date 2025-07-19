@@ -399,3 +399,40 @@ section {
     object-fit: cover;
     object-position: center;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-container {
+        top: 15px;
+        right: 15px;
+        padding: 0.6rem;
+    }
+    
+    .nav-item {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+        padding: 0.3rem;
+    }
+    
+    .theme-toggle {
+        top: 15px;
+        left: 15px;
+        padding: 0.6rem;
+    }
+    
+    /* Stack vertically on very small screens */
+    @media (max-width: 480px) {
+        .nav-container {
+            top: 70px; /* Move below theme toggle */
+            right: 15px;
+            left: 15px; /* Full width */
+            text-align: center;
+        }
+        
+        .nav-item {
+            display: inline-block;
+            margin: 0 0.3rem;
+            font-size: 0.85rem;
+        }
+    }
+}
