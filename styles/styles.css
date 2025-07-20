@@ -438,7 +438,7 @@ section {
         justify-content: center;
     }
 
-    .academic-info {
+    .academic-info, .program-info {
         padding: 0.8rem;
     }
     
@@ -486,7 +486,7 @@ section {
     font-weight: 500;
 }
 
-.university-name {
+.university-name, .program-description {
     font-style: italic;
     margin-bottom: 1.5rem;
     font-size: 1rem;
@@ -563,7 +563,7 @@ section {
     font-size: 0.95rem;
 } */
 
-.academic-info {
+.academic-info, .program-info {
     margin-top: 1.5rem;
     padding: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -572,17 +572,17 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
-.academic-info p {
+.academic-info p, .program-info p {
     margin-bottom: 0.8rem;
     font-size: 0.95rem;
     line-height: 1.4;
 }
 
-.academic-info p:last-child {
+.academic-info p:last-child, .program-info p:last-child {
     margin-bottom: 0;
 }
 
-.academic-info strong {
+.academic-info strong, .program-info strong {
     color: var(--text-light);
     font-weight: 600;
 }
@@ -612,7 +612,11 @@ section {
     border-top-color: rgba(0, 0, 0, 0.1);
 } */
 
-.light-mode .academic-info {
+/* .light-mode .timeline-item + .timeline-item {
+    border-top-color: rgba(0, 0, 0, 0.1);
+} */
+
+.light-mode .academic-info, .light-mode .program-info {
     border-color: rgba(0, 0, 0, 0.1);
     /* background: rgba(0, 0, 0, 0.02); */
 }
