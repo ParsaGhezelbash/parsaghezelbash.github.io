@@ -614,5 +614,5 @@ section {
 
 .light-mode .academic-info {
     border-color: rgba(0, 0, 0, 0.1);
-    background: rgba(0, 0, 0, 0.02);
+    /* background: rgba(0, 0, 0, 0.02); */
 }
