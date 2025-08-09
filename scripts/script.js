@@ -26,23 +26,44 @@ const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-item');
 
 window.addEventListener('scroll', () => {
-    let current = '';
-    const offset = 100;
-    
+    let currentSectionId = '';
+    const offset = 150; // Adjusted offset for better accuracy
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - offset) {
-            current = section.getAttribute('id');
+        
+        // Check if section is in the viewport
+        if (pageYOffset >= (sectionTop - offset) && pageYOffset < (sectionTop + sectionHeight - offset)) {
+            currentSectionId = section.getAttribute('id');
         }
     });
 
+    // Handle the top of the page case
+    if (pageYOffset < sections[0].offsetTop - offset) {
+        // If we are above the first section, nothing should be active,
+        // or you might want to force the 'home' link to be active.
+        // Let's default to the first nav item (Home).
+        currentSectionId = navLinks[0].getAttribute('href').substring(1);
+    }
+
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
+        const linkHref = link.getAttribute('href');
+        
+        if (linkHref.includes(currentSectionId)) {
             link.classList.add('active');
         }
     });
+
+    // Special case for when at the very top, ensure only 'Home' is active
+    if (window.scrollY === 0) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        const homeLink = document.querySelector('a.nav-item[href="#hero"]');
+        if (homeLink) {
+            homeLink.classList.add('active');
+        }
+    }
 });
 
 const style = document.createElement('style');
