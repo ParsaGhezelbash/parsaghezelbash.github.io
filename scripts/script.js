@@ -89,7 +89,7 @@ document.getElementById('theme-icon').addEventListener('click', () => {
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
 }); 
 
-const savedTheme = localStorage.getItem('theme') || 'dark';
+const savedTheme = localStorage.getItem('theme') || 'light';
 if (savedTheme === 'light') {
     document.body.classList.add('light-mode');
     document.getElementById('theme-icon').classList.add('fa-sun');
@@ -118,8 +118,8 @@ document.querySelectorAll('.modal-close').forEach(btn => {
     });
 });
 
-document.getElementById('email-card').addEventListener('click', () => {
-    const email = document.getElementById('email-address').innerText;
+document.getElementById('email-icon').addEventListener('click', () => {
+    const email = 'parsaghezelbash04@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
         const notification = document.createElement('div');
         notification.innerText = 'Email copied to clipboard!';
@@ -128,5 +128,7 @@ document.getElementById('email-card').addEventListener('click', () => {
         setTimeout(() => {
             notification.remove();
         }, 3000);
+    }).catch(err => {
+        console.error('Failed to copy email: ', err);
     });
 });

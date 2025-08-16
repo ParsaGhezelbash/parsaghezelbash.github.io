@@ -143,6 +143,22 @@ section {
     width: 100%;
 }
 
+.research-interests {
+    margin-top: 1.5rem;
+}
+
+.research-interests h3 {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.research-interests p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+
 
 .project-grid {
     display: grid;
@@ -172,10 +188,10 @@ section {
 }
 
 .project-card:hover {
-    transform: translateY(-10px) scale(1.02);
+    /* transform: translateY(-10px) scale(1.02); */
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--secondary);
-    box-shadow: 0 15px 30px var(--shadow-color);
+    /* box-shadow: 0 15px 30px var(--shadow-color); */
 }
 
 .project-card h3 {
@@ -199,32 +215,6 @@ section {
     font-size: 0.8rem;
 }
 
-
-.skill-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    padding: 2rem;
-    margin-bottom: 2rem;
-}
-
-.skill-tag {
-    background: transparent;
-    color: var(--text-light);
-    border: 2px solid var(--secondary);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.skill-tag:hover {
-    background: var(--secondary);
-    color: var(--primary);
-    transform: translateY(-3px);
-}
 
 @media (max-width: 768px) {
     .hero-wrapper {
@@ -301,45 +291,19 @@ section {
     transition: 0.3s;
 }
 
-.contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 0rem 10% 2rem;
-    text-align: center;
-    max-width: 1000px; /* Limit the maximum width */
-    margin: 0 auto; /* Center the entire grid */
-    width: 100%;
-    justify-items: center; /* Center grid items */
+.social-links a:hover {
+    color: var(--secondary);
+    transform: scale(1.1);
 }
 
-.contact-item {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-light);
-    padding: 2rem;
-    border-radius: 15px;
-    height: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+.light-mode .social-links a:hover {
+    color: var(--secondary);
+    transform: scale(1.1);
 }
-
 .contact-link {
     text-decoration: none;
     color: inherit;
-    display: flex;
-}
-
-.contact-item:hover {
-    transform: translateY(-10px) scale(1.02);
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--secondary);
-    box-shadow: 0 15px 30px var(--shadow-color);
-}
-
-.contact-item i {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    display: block;
+    cursor: pointer;
 }
 
 .light-mode .project-card,
@@ -378,33 +342,33 @@ section {
 
 .cta-button {
     display: inline-block;
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
     padding: 0.5rem 1rem;
     background: transparent;
     color: var(--secondary);
-    border: 2px solid var(--secondary);
+    /* border: 2px solid var(--secondary); */
     border-radius: 5px;
     font-weight: bold;
     text-transform: none;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    background: var(--secondary);
-    color: var(--primary);
+    /* transform: translateY(-3px); */
+    /* background: var(--secondary); */
+    color: var(--secondary);
 }
 
-.light-mode .cta-button {
+/* .light-mode .cta-button {
     color: var(--secondary);
     border-color: var(--secondary);
-}
+} */
 
 .light-mode .cta-button:hover {
-    background: var(--secondary);
-    color: var(--primary);
+    /* background: var(--secondary); */
+    color: var(--secondary);
 }
 
 .notification {
@@ -430,7 +394,7 @@ section {
 .profile-img {
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 5%;
     overflow: hidden;
     margin: 0.5rem auto;
     /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -564,10 +528,10 @@ section {
     transition: all 0.3s ease;
 }
 
-.course-tag:hover {
+/* .course-tag:hover {
     background: rgba(0, 255, 136, 0.2);
     transform: translateY(-2px);
-}
+} */
 
 .academic-achievements {
     margin-top: 1.5rem;
@@ -638,9 +602,9 @@ section {
     border-color: rgba(0, 123, 255, 0.3);
 }
 
-.light-mode .course-tag:hover {
+/* .light-mode .course-tag:hover {
     background: rgba(0, 123, 255, 0.2);
-}
+} */
 
 .light-mode .education-period {
     background: var(--secondary);
@@ -663,4 +627,27 @@ section {
 .light-mode .academic-info, .light-mode .program-info {
     border-color: rgba(0, 0, 0, 0.1);
     /* background: rgba(0, 0, 0, 0.02); */
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-links {
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.light-mode .footer {
+    background: rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
