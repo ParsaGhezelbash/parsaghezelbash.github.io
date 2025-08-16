@@ -118,17 +118,19 @@ document.querySelectorAll('.modal-close').forEach(btn => {
     });
 });
 
-document.getElementById('email-icon').addEventListener('click', () => {
-    const email = 'parsaghezelbash04@gmail.com';
-    navigator.clipboard.writeText(email).then(() => {
-        const notification = document.createElement('div');
-        notification.innerText = 'Email copied to clipboard!';
-        notification.classList.add('notification');
-        document.body.appendChild(notification);
-        setTimeout(() => {
-            notification.remove();
-        }, 3000);
-    }).catch(err => {
-        console.error('Failed to copy email: ', err);
+document.querySelectorAll('.email-icon').forEach(icon => {
+    icon.addEventListener('click', () => {
+        const email = 'parsaghezelbash04@gmail.com';
+        navigator.clipboard.writeText(email).then(() => {
+            const notification = document.createElement('div');
+            notification.innerText = 'Email copied to clipboard!';
+            notification.classList.add('notification');
+            document.body.appendChild(notification);
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }).catch(err => {
+            console.error('Failed to copy email: ', err);
+        });
     });
 });
