@@ -194,6 +194,30 @@ section {
     /* box-shadow: 0 15px 30px var(--shadow-color); */
 }
 
+.project-image {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
 .project-card h3 {
     margin-bottom: 1rem;
     font-size: 1.2rem;
@@ -228,6 +252,10 @@ section {
     }
     .project-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .project-image {
+        height: 120px;
     }
 }
 
